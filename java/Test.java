@@ -16,8 +16,13 @@ public class Test {
     private static Integer TEST_COUNT = 10;
 
     public static void main(String[] args) throws IOException {
+        if (args == null || args.length != 2 || args[0] == null || args[1] == null) {
+            System.out.println("Specify argumets: 1. Path to dictionary 2. Path to tests");
+        }
+        String dict = args[0];
+        String tests = args[1];
         String letters = Language.getLetters("EN");
-        Checker checker = new SpellChecker(new File("../dict/en.txt"), letters);
+        Checker checker = new SpellChecker(new File(dict), letters);
         long testsStart = System.currentTimeMillis();
         int allCount = 0;
         int allFirst = 0;
@@ -25,7 +30,7 @@ public class Test {
         int allNot = 0;
         for (int i = 0; i < TEST_COUNT; ++i) {
             long testStart = System.currentTimeMillis();
-            File file = new File("../tests/test" + i + ".txt");
+            File file = new File(tests + "/" + "test" + i + ".txt");
             System.out.println("=============TEST " + (i + 1) + "=============");
             int count = 0;
             int first = 0;

@@ -1,90 +1,77 @@
-# Spellchecker
-Spellchecker (English and Russian) based on Damerau–Levenshtein distance
-
-Compile: make all
-
-Run tests: make test
-
-Russian spellchecking: make russian
-
-English spellchecking: make english
-
-Create Russian dictionary: make russianDict
-
-Create English dictionary: make russianDict
-
-Or you can use it through java Main (--help for usage)
-
-English books are from https://www.gutenberg.org/
-
-Test cases are from http://ota.ox.ac.uk/headers/0643.xml (adapted)
-
-Inspired by http://norvig.com/spell-correct.html
-
 =============TEST 1=============
 Count: 44
 First is true: 56.82%
 True is among: 75.00%
 Not known words: 13.64%
-Time: 0.61s
+Time: 0.45s
+Words / sec: 98.43
 =============TEST 2=============
 Count: 170
 First is true: 48.82%
 True is among: 71.76%
 Not known words: 7.06%
-Time: 1.06s
+Time: 0.93s
+Words / sec: 182.99
 =============TEST 3=============
 Count: 447
 First is true: 48.32%
 True is among: 63.09%
 Not known words: 2.68%
-Time: 5.10s
+Time: 4.15s
+Words / sec: 107.84
 =============TEST 4=============
 Count: 343
 First is true: 51.90%
 True is among: 69.68%
 Not known words: 14.58%
-Time: 2.96s
+Time: 2.45s
+Words / sec: 139.83
 =============TEST 5=============
 Count: 493
 First is true: 39.35%
 True is among: 59.43%
 Not known words: 4.06%
-Time: 3.13s
+Time: 2.54s
+Words / sec: 194.32
 =============TEST 6=============
 Count: 788
 First is true: 67.64%
 True is among: 75.13%
 Not known words: 22.84%
-Time: 10.66s
+Time: 8.89s
+Words / sec: 88.61
 =============TEST 7=============
 Count: 543
 First is true: 66.11%
 True is among: 76.43%
 Not known words: 15.84%
-Time: 6.73s
+Time: 5.82s
+Words / sec: 93.25
 =============TEST 8=============
 Count: 881
 First is true: 66.06%
 True is among: 77.19%
 Not known words: 18.50%
-Time: 9.86s
+Time: 8.23s
+Words / sec: 107.02
 =============TEST 9=============
 Count: 382
 First is true: 69.37%
 True is among: 76.44%
 Not known words: 22.77%
-Time: 5.18s
+Time: 4.12s
+Words / sec: 92.72
 =============TEST 10=============
 Count: 4951
 First is true: 59.83%
 True is among: 73.14%
 Not known words: 11.01%
-Time: 48.09s
+Time: 38.93s
+Words / sec: 127.18
 =============TESTS=============
 Count: 9042
 First is true: 59.69%
 True is among: 72.65%
 Not known words: 12.84%
-Time: 93.40s
-
+Time: 76.52s
+Words / sec: 118.17

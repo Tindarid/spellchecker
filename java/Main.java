@@ -13,9 +13,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static void createDictionary(String letters, String booksDir, String destDict) {
+    public static void createDictionary(String letters, String booksDir, String dest) {
         try {
-            int books = Dictionary.create(new File(booksDir), new File(destDict), letters);
+            int books = Dictionary.create(new File(booksDir), new File(dest), letters);
             System.out.println(books + " books resolved succesfully");
         } catch (DictionaryException e) {
             System.err.println(e.getMessage());
@@ -49,7 +49,7 @@ public class Main {
     }
 
     public static void printUsage() {
-        System.out.println("Usage: java Main [language] [dict or check] [dict dir] [books dir (if dict mode)]");
+        System.out.println("Usage: java Main [language] [dict or check] [dict] [books dir (if dict mode)]");
     }
 
     public static void main(String[] args) {
